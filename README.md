@@ -20,7 +20,7 @@ Please implement a production grade microservice, in any programming language or
 ## Installation
 ```bash
 # Clone the repository 
-git clone git@github.com:nashzii/interview-file-upload.git
+git clone https://github.com/nashzii/interview-file-upload.git
 # Change directory  
 cd interview-file-upload 
 # Install dependencies npm install
