@@ -6,11 +6,11 @@ Please implement a production grade microservice, in any programming language or
 4.  API Standard (RESTFul)
 
 ## Table of Contents
- - [Tech stack](#TechStack)
- - [Installation](#Installation)
- - [Usage](#Usage)
+ - [Tech stack](#tech-stack)
+ - [Installation](#installation)
+ - [Usage](#usage)
 
-## TechStack
+## Tech Stack
 ![architect](architect.png "Architect")
  - **Nodejs** (express) as microservice, for interface upload file, email send
  - **MiniO** as file storage 
