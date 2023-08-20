@@ -27,6 +27,7 @@ cd interview-file-upload
 npm install
 ```
 ## Usage
+require [node](https://nodejs.org/en) version 18.x+
 require [docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/) before use
 ```bash
 # to build docker image
@@ -36,6 +37,7 @@ docker-compose up -d
 ```
 to access MiniO web console
 http://localhost:9090/browser
+user: ADMIN, password: P@ssw0rd
 
 to send request for upload file
 ```bash
@@ -43,3 +45,5 @@ curl --location 'http://localhost/upload' \
 --form 'file=@"/Users/nashzii/Desktop/photo.png"' \
 --form 'email="your_email@hotmail.com"'
 ```
+
+Why **.env** exist in repo ? for interview and take home assignment propose
