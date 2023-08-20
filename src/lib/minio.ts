@@ -8,4 +8,22 @@ const minioClient = new MinioClient({
   secretKey: process.env.MINIO_SECRET_KEY,
 });
 
+minioClient.bucketExists(process.env.MINIO_BUCKET_NAME, (err, exists) => {
+  if (err) {
+    console.error('Error checking bucket existence:', err);
+    return;
+  }
+  if (!exists) {
+    // The bucket doesn't exist, so create it
+    minioClient.makeBucket(process.env.MINIO_BUCKET_NAME, '', (err) => {
+      if (err) {
+        console.error('Error creating bucket:', err);
+        return;
+      }
+
+      console.log('Bucket created successfully');
+    });
+  }
+});
+
 export default minioClient;
