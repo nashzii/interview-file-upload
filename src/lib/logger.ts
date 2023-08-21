@@ -1,4 +1,4 @@
-import winston, { createLogger, format } from 'winston';
+import winston, { createLogger, format, transports } from 'winston';
 import 'winston-daily-rotate-file';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -14,7 +14,7 @@ const transport = new winston.transports.DailyRotateFile({
 
 export const logOption = {
   format: combine(errors({ stack: true }), timestamp(), json()),
-  transports: [transport],
+  transports: [transport, new transports.Console()],
 } as winston.LoggerOptions;
 
 export class Logger {
