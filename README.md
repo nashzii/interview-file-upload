@@ -25,21 +25,27 @@ git clone https://github.com/nashzii/interview-file-upload.git
 cd interview-file-upload 
 # Install dependencies npm install
 npm install
+# start development
+npm run dev
 ```
 ## Usage
-require [node](https://nodejs.org/en) version 18.x+
 require [docker](https://www.docker.com/) and [docker-compose](https://docs.docker.com/compose/) before use
 ```bash
 # to build docker image
 docker build -t upload-app . 
 # running rest of service with docker compose
 docker-compose up -d
+
 ```
-to access MiniO web console
+### to access MiniO web console
 http://localhost:9090/browser
 user: ADMIN, password: P@ssw0rd
 
-to send request for upload file
+### to send request for upload file
+
+#### Postman
+https://documenter.getpostman.com/view/3615872/2s9Y5SXmRS
+#### Curl
 ```bash
 curl --location 'http://localhost/upload' \
 --form 'file=@"/Users/nashzii/Desktop/photo.png"' \
